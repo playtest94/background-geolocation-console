@@ -26,11 +26,11 @@ ENV DATABASE_URL=process.env.DATABASE_URL
 # Google Maps API Key for map
 ENV GOOGLE_MAPS_API_KEY=process.env.GOOGLE_MAPS_API_KEY
 # Do you use it for a lot of organisation or users?
-  SHARED_DASHBOARD=""
+ENV SHARED_DASHBOARD=process.env.SHARED_DASHBOARD
 # Manage them in one account? http://host:9000/admin256
-  ADMIN_TOKEN=admin256
+ENV ADMIN_TOKEN=process.env.ADMIN_TOKEN
 # Do you need auth?
-  PASSWORD=test
+ENV PASSWORD=process.env.PASSWORD
 
 # Firebase way as example
 # ENV FIREBASE_URL=https://geolocation-console.firebaseio.com
