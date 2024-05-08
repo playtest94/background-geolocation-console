@@ -26,7 +26,7 @@ ENV DATABASE_URL=process.env.DATABASE_URL
 # Google Maps API Key for map
 ENV GOOGLE_MAPS_API_KEY=process.env.GOOGLE_MAPS_API_KEY
 # Do you use it for a lot of organisation or users?
-  SHARED_DASHBOARD= \
+  SHARED_DASHBOARD=""
 # Manage them in one account? http://host:9000/admin256
   ADMIN_TOKEN=admin256
 # Do you need auth?
