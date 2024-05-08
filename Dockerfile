@@ -20,17 +20,17 @@ ENV TZ=UTC \
 # By default console will use SqlLite file storage
 # NB!: It will clean on conatiner re-creation
 #      add volume or setup Postgres/Firebase ENV
-ENV DATABASE_URL= \
+ENV DATABASE_URL=process.env.DATABASE_URL
 # For Postgres SQL
 # ENV DATABASE_URL=postgres://<username>:<password>@<hostname>:<port>/<dbname>
 # Google Maps API Key for map
-  GOOGLE_MAPS_API_KEY=AI...vNkg \
+ENV GOOGLE_MAPS_API_KEY=process.env.GOOGLE_MAPS_API_KEY
 # Do you use it for a lot of organisation or users?
   SHARED_DASHBOARD= \
 # Manage them in one account? http://host:9000/admin256
-  ADMIN_TOKEN= \
+  ADMIN_TOKEN=admin256
 # Do you need auth?
-  PASSWORD=
+  PASSWORD=test
 
 # Firebase way as example
 # ENV FIREBASE_URL=https://geolocation-console.firebaseio.com
@@ -42,7 +42,7 @@ RUN NODE_ENV=production ./node_modules/.bin/webpack && \
     NPM_CONFIG_PRODUCTION=true npm prune --production && \
     npm i sqlite3
 
-ENV NPM_CONFIG_PRODUCTION=true \
+ENV NPM_CONFIG_PRODUCTION=false \
     NODE_ENV=production
 
 CMD ["node", "./bin/server.js"]
