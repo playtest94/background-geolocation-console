@@ -43,4 +43,4 @@ RUN NODE_ENV=production
 ENV NPM_CONFIG_PRODUCTION=false \
     NODE_ENV=production
 
-CMD ["node", "./bin/server.js"]
+CMD ["node", "./bin/server/index.js"]
